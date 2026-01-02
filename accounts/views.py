@@ -76,3 +76,13 @@ class ChangePasswordView(APIView):
             user.save()
             return Response({"message": "رمز عبور با موفقیت تغییر یافت."})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CreateAdminView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication]
+
+    def perform_create(self, serializer):
+        serializer.save(is_staff=True)

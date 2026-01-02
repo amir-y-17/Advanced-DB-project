@@ -4,7 +4,7 @@ from django.urls import path
 
 app_name = "accounts"
 urlpatterns = [
-    # path("users/admin/", views.CreateAdminView.as_view(), name="create-admin"),
+    path("users/admin/", views.CreateAdminView.as_view(), name="create-admin"),
     path("users/", views.UserListView.as_view(), name="user-list"),
     path(
         "users/<int:pk>/",
