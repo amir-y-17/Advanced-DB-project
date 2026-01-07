@@ -24,6 +24,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # API endpoints
     path("api/accounts/", include("accounts.urls")),
+    path("api/locations/", include("locations.urls")),
     # Documentation
     path("api/docs/", SwaggerView.as_view(url_name="schema"), name="swagger-ui"),
 ]
