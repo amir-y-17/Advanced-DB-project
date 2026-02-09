@@ -161,8 +161,9 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Advanced DB Project API",
     "DESCRIPTION": "API documentation for the Advanced DB Project",
     "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "SERVE_URLCONF": "config.urls",
 }
-
 # Custom user model
 AUTH_USER_MODEL = "accounts.User"
 
