@@ -161,8 +161,9 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Advanced DB Project API",
     "DESCRIPTION": "API documentation for the Advanced DB Project",
     "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "SERVE_URLCONF": "config.urls",
 }
-
 # Custom user model
 AUTH_USER_MODEL = "accounts.User"
 
@@ -180,3 +181,12 @@ SIMPLE_JWT = {
     "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
     "TOKEN_TYPE_CLAIM": "type",
 }
+
+# CORS settings
+CORS_ALLOWED_ORIGINS = [
+    "http://amirreza-yaghoubi.ir",
+    "https://amirreza-yaghoubi.ir",
+    "http://localhost:8000",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
