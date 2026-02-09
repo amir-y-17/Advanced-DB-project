@@ -180,3 +180,12 @@ SIMPLE_JWT = {
     "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
     "TOKEN_TYPE_CLAIM": "type",
 }
+
+# CORS settings
+CORS_ALLOWED_ORIGINS = [
+    "http://amirreza-yaghoubi.ir",
+    "https://amirreza-yaghoubi.ir",
+    "http://localhost:8000",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
